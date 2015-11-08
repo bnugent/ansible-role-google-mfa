@@ -1,0 +1,5 @@
+---
+- name: Install Google Auth PAM module
+  apt:
+    name: "{{ google_mfa_pkg_name }}"
+    state: "{{ google_mfa_pkg_state }}"

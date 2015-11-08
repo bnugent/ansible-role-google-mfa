@@ -1,0 +1,15 @@
+---
+- name: Add user to the Google Auth user group
+  user:
+    name: "{{ item }}"
+    append: yes
+    groups: "{{ google_mfa_config_usergroup }}"
+
+
+- name: Enroll mfa users
+  become_user: "{{ item }}"
+  shell: |
+    google-authenticator -tdfuw 21 | tee -a /home/{{ item }}/mfa.log
+  args:
+    creates: /home/{{ item }}/.google_authenticator
+  with_items: google_mfa_users

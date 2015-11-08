@@ -1,0 +1,6 @@
+---
+- include: install.yml
+- include: configure.yml
+- include: enroll_users.yml
+  when: google_mfa_users != []
+
