@@ -4,6 +4,7 @@
     name: "{{ item }}"
     append: yes
     groups: "{{ google_mfa_config_usergroup }}"
+  with_items: google_mfa_users
 
 
 - name: Enroll mfa users
