@@ -10,6 +10,7 @@ Role Variables
 * `google_mfa_pkg_state` - Google Auth Pam package state
 * `google_mfa_config_usergroup` - Group name for users you want to use Google Auth
 * `google_mfa_users` - List of usernames to enroll
+* `google_mfa_enroll_users` - Whether to enroll users (default) or just set up mfa
 * `google_mfa_openssh_service_name` - OpenSSH service name
 
 

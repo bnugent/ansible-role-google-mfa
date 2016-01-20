@@ -2,5 +2,6 @@
 - include: install.yml
 - include: configure.yml
 - include: enroll_users.yml
-  when: google_mfa_users != []
+  when: google_mfa_users != [] and google_mfa_enroll_users == true
+  tags: google_mfa_enroll
 

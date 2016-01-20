@@ -3,4 +3,5 @@ google_mfa_pkg_name: libpam-google-authenticator
 google_mfa_pkg_state: latest
 google_mfa_config_usergroup: google_mfa
 google_mfa_users: []
+google_mfa_enroll_users: true
 google_mfa_openssh_service_name: ssh
